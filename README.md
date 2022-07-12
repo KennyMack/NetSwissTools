@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/KennyMack/NetSwissTools/main/.github/images/NetSwissToolsIcon.png" alt=".NET Swiss Tools icon" width="300px" />
+<img src="https://raw.githubusercontent.com/KennyMack/NetSwissTools/main/.github/images/NetSwissToolsIcon.png" alt=".NET Swiss Tools icon" left="300px" width="300px" />
 
 # NetSwissTools
 A smart collection of classes and tools to improve the development with .NET
