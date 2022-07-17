@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>NetSwissTools</PackageId>
+    <Version>1.0.1</Version>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Jonathan Vale</Authors>
+    <Company>KennyMack</Company>
+    <Description>A collection of classes and tools to improve the development with .NET</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/KennyMack/NetSwissTools</PackageProjectUrl>
+    <PackageIcon>NetSwissToolsIcon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/KennyMack/NetSwissTools</RepositoryUrl>
+    <RepositoryType>public</RepositoryType>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\NetSwissToolsIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
