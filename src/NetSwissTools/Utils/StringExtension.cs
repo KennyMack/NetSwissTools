@@ -24,10 +24,48 @@ namespace NetSwissTools.Utils
         /// <returns>System.String.</returns>
         public static string SubStr(this string text, int start, int count)
         {
+            if (text.IsEmpty())
+                return "";
+
             if (text.Length > count && count > 0)
                 return text.Substring(start, count);
 
             return text;
+        }
+
+        /// <summary>
+        /// Cuts the text up to the indicated position and returns the indicated 
+        /// number of characters and concatenates with elipsis in end.
+        /// if the number of characters is greater than the text size all the text will be returned
+        /// </summary>
+        /// <param name="text">Text to be cutted</param>
+        /// <param name="start">Initial position</param>
+        /// <param name="count">Number of characters</param>
+        /// <returns>System.String.</returns>
+        public static string SubStrElipsisEnd(this string text, int start, int count)
+        {
+
+            if (text.IsEmpty())
+                return "";
+
+            return $"{SubStr(text, start, count)}{((count < text.Length) ? "..." : "")}";
+        }
+
+        /// <summary>
+        /// Cuts the text up to the indicated position and returns the indicated 
+        /// number of characters and concatenates with elipsis on start and end.
+        /// if the number of characters is greater than the text size all the text will be returned
+        /// </summary>
+        /// <param name="text">Text to be cutted</param>
+        /// <param name="start">Initial position</param>
+        /// <param name="count">Number of characters</param>
+        /// <returns>System.String.</returns>
+        public static string SubStrElipsisStartAndEnd(this string text, int start, int count)
+        {
+            if (text.IsEmpty())
+                return "";
+
+            return $"{(start > 0 ? "..." : "")}{SubStr(text, start, count)}{((count < text.Length) ? "..." : "")}";
         }
 
         /// <summary>
@@ -390,7 +428,7 @@ namespace NetSwissTools.Utils
             {
                 if (pInscr.IsEmpty()) return false;
                 if (pInscr.Trim().ToUpper() == "ISENTO") return true;
-                if (!pUf.ValidateUF() || pUf.ToUpper() == "EX") return false;
+                if (!pUf.IsValidUF() || pUf.ToUpper() == "EX") return false;
 
                 const string c09 = "0-9";
                 int[,] cPesos =
@@ -838,7 +876,7 @@ namespace NetSwissTools.Utils
             var mascara = new string('#', pInscr.Length);
             pUf = pUf.Trim().ToUpper();
 
-            Guard.Against<ArgumentException>(!ValidateUF(pUf), "Invalid UF.");
+            Guard.Against<ArgumentException>(!IsValidUF(pUf), "Invalid UF.");
 
             switch (pUf)
             {
@@ -968,7 +1006,7 @@ namespace NetSwissTools.Utils
         /// </summary>
         /// <param name="uf">UF</param>
         /// <returns>System.Boolean</returns>
-        public static bool ValidateUF(this string uf)
+        public static bool IsValidUF(this string uf)
         {
             if (uf.IsEmpty()) return false;
 
@@ -1372,5 +1410,46 @@ namespace NetSwissTools.Utils
 
             return text;
         }
+
+        /// <summary>
+        /// Returns a converted camel cased string into a string delimited by dashes.
+        /// Eg.
+        ///     StringExtension.Dasherize("dataRate"); -> "data-rate"
+        ///     StringExtension.Dasherize("CarSpeed"); -> "-car-speed"
+        ///     StringExtension.Dasherize("YesWeCan"); -> "yes-we-can"
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>return string dasherized</returns>
+        public static string Dasherize(string value)
+        {
+            return string.IsNullOrWhiteSpace(value) ?
+                value :
+                Regex.Replace(
+                    value,
+                    @"\p{Lu}",
+                    m => "-" + m.ToString().ToLower(CultureInfo.CurrentCulture));
+        }
+
+        /// <summary>
+        /// Remove any underscores or dashes and convert a string into camel casing.
+        /// Eg.
+        ///     StringExtension.Camelize("data_rate"); -> "dataRate"
+        ///     StringExtension.Camelize("background-color"); -> "backgroundColor"
+        ///     StringExtension.Camelize("-webkit-something"); -> "WebkitSomething"
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>returns string camelized</returns>
+        public static string Camelize(string value)
+        {
+            return string.IsNullOrWhiteSpace(value) ?
+                value :
+                Regex.Replace(
+                    value,
+                    @"[-_]\p{L}",
+                    m => m.ToString().ToUpper(CultureInfo.CurrentCulture))
+                    .Replace("-", string.Empty)
+                    .Replace("_", string.Empty);
+        }
+
     }
 }

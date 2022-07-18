@@ -93,24 +93,17 @@ namespace NetSwissTools.Utils
         /// Returns if date is weekend
         /// </summary>
         /// <param name="date">data</param>
-        /// <returns>System.DateTime</returns>
-        public static bool IsWeekend(this DateTime pDate)
-        {
-            switch (pDate.DayOfWeek)
-            {
-                case DayOfWeek.Saturday:
-                case DayOfWeek.Sunday:
-                    return true;
-                case DayOfWeek.Monday:
-                case DayOfWeek.Tuesday:
-                case DayOfWeek.Wednesday:
-                case DayOfWeek.Thursday:
-                case DayOfWeek.Friday:
-                    return false;
-                default:
-                    return false;
-            }
-        }
+        /// <returns>Returns true if day of week is Sunday or Saturday</returns>
+        public static bool IsWeekend(this DateTime date) =>
+            date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
+
+        /// <summary>
+        /// Returns if date is weekend
+        /// </summary>
+        /// <param name="date">data</param>
+        /// <returns>Returns true if day of week is Sunday or Saturday</returns>
+        public static bool IsWeekend(this DateTimeOffset date) =>
+            IsWeekend(date.DateTime);
         #endregion
 
         #region Get next working day
@@ -175,6 +168,59 @@ namespace NetSwissTools.Utils
             var hora = Math.Truncate(dhour / 60);
             var minutos = Math.Round(Math.Abs(hora - (dhour / 60)) * 60, 0);
             return string.Concat(hora.ToString().PadLeft(2, '0'), ":", minutos.ToString().PadLeft(2, '0'));
+        }
+        #endregion
+
+        #region As UTC
+        /// <summary>
+        /// Ensures that local times are converted to UTC times.  Unspecified kinds are recast to UTC with no conversion.
+        /// </summary>
+        /// <param name="value">The date-time to convert.</param>
+        /// <returns>The date-time in UTC time.</returns>
+        public static DateTime AsUtc(this DateTime value)
+        {
+            return value.Kind == DateTimeKind.Unspecified ?
+                new DateTime(value.Ticks, DateTimeKind.Utc) :
+                value.ToUniversalTime();
+        }
+
+        /// <summary>
+        /// Ensures that local times are converted to UTC times.  Unspecified kinds are recast to UTC with no conversion.
+        /// </summary>
+        /// <param name="value">The nullable date-time to convert.</param>
+        /// <returns>The nullable date-time in UTC time.</returns>
+        public static DateTime? AsUtc(this DateTime? value)
+        {
+            if (!value.HasValue) 
+                return null;
+
+            return value.Value.Kind == DateTimeKind.Unspecified ?
+                new DateTime(value.Value.Ticks, DateTimeKind.Utc) :
+                value.Value.ToUniversalTime();
+        }
+        #endregion
+
+        #region Unix date
+        /// <summary>
+        /// Convert a unix timestamp to the corresponding datetime.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static DateTime FromUnixTime(double value)
+        {
+            var unixStart = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            return unixStart.AddSeconds(value);
+        }
+        /// <summary>
+        /// Convert a datetime to its corresponding unix timestamp value.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public static long ToUnixTime(DateTime date)
+        {
+            var unixStart = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            var timespan = date - unixStart;
+            return (long)Math.Floor(timespan.TotalSeconds);
         }
         #endregion
     }
