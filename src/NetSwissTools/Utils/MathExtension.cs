@@ -32,7 +32,9 @@ namespace NetSwissTools.Utils
         {
             try
             {
-                return dividend == 0 || divisor == 0 ? 0 : (double)(dividend / (dynamic)divisor);
+                return dividend == 0 || divisor == 0 ? 0 : 
+                    (double)decimal.Divide(Convert.ToDecimal(dividend), Convert.ToDecimal(divisor));
+                    // (double)(dividend / (decimal)divisor);
             }
             catch (Exception)
             {
