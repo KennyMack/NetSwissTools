@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageId>NetSwissTools</PackageId>
     <Version>1.0.2</Version>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Jonathan Vale</Authors>
     <Company>KennyMack</Company>
     <Description>A collection of classes and tools to improve the development with .NET</Description>

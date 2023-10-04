@@ -28,9 +28,11 @@ namespace NetSwissTools.Utils
                 return "";
 
             if (text.Length > count && count > 0)
-                return text.Substring(start, count);
-
-            return text;
+            {
+                var FinalPosition = count + start > text.Length ? text.Length - (start > 0 ? start : 1) : count;
+                return text.Substring(start, (start > 0 ? FinalPosition + start : FinalPosition));
+            }
+            return text.Substring(start);
         }
 
         /// <summary>
@@ -48,7 +50,9 @@ namespace NetSwissTools.Utils
             if (text.IsEmpty())
                 return "";
 
-            return $"{SubStr(text, start, count)}{((count < text.Length) ? "..." : "")}";
+            var TextResult = SubStr(text, start, count);
+
+            return $"{}{((count < text.Length && count > 0) ? "..." : "")}";
         }
 
         /// <summary>
@@ -1306,17 +1310,12 @@ namespace NetSwissTools.Utils
         public static string FormatCPFCNPJ(this string value)
         {
             value = value.OnlyNumbers();
-            switch (value.Trim().Length)
-            {
-                case 11:
-                    return FormatCPF(value);
+            if (value.Trim().Length <= 11)
+                return FormatCPF(value);
+            if (value.Trim().Length > 11)
+                return FormatCNPJ(value);
 
-                case 14:
-                    return FormatCNPJ(value);
-
-                default:
-                    return value;
-            }
+            return value;
         }
 
         /// <summary>
