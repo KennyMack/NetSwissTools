@@ -51,8 +51,9 @@ namespace NetSwissTools.Utils
                 return "";
 
             var TextResult = SubStr(text, start, count);
+            var Elipsis = (TextResult.Length != text.Length) ? "..." : "";
 
-            return $"{}{((count < text.Length && count > 0) ? "..." : "")}";
+            return $"{TextResult}{Elipsis}";
         }
 
         /// <summary>
@@ -1399,7 +1400,7 @@ namespace NetSwissTools.Utils
                     foreach (var message in mensagemPartes)
                     {
                         if (!message.IsEmpty() && message.StartsWith("ORA") && Convert.ToInt32(message.SubStr(4, 5)).IsBetweenII(20000, 20999))
-                            resultado.AppendLine(message[10..].TrimStartAndEnd());
+                            resultado.AppendLine(message.Substring(10).TrimStartAndEnd());
                         else if (!message.IsEmpty() && !message.StartsWith("ORA"))
                             resultado.AppendLine(message);
                     }
