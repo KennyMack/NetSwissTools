@@ -15,7 +15,8 @@
     <RepositoryType>public</RepositoryType>
     <AssemblyVersion>1.0.0.3</AssemblyVersion>
     <FileVersion>1.0.0.3</FileVersion>
-    <PackageTags>Swiss;Tools;SwissArmy;Common;Implementations;Validation;Exception;Task;Empty;Net Tools;CPF;CNPJ;CEP;IE;Inscrição Estadual;</PackageTags>
+    <PackageTags>Swiss;Tools;SwissArmy;Common;Validation;Exception;Net Tools;CPF;CNPJ;CEP;IE;Inscrição Estadual;Utility;Utilities;extensions;method;methods;helpers;helpers;strings;dates;pack;</PackageTags>
+    <PackageReleaseNotes />
   </PropertyGroup>
 
   <ItemGroup>

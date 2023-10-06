@@ -30,7 +30,11 @@ namespace NetSwissTools.Utils
             if (text.Length > count && count > 0)
             {
                 var FinalPosition = count + start > text.Length ? text.Length - (start > 0 ? start : 1) : count;
-                return text.Substring(start, (start > 0 ? FinalPosition + start : FinalPosition));
+
+                var Count = (start > 0 ? FinalPosition + start : FinalPosition);
+
+                var StrEnd = text.Substring(start, FinalPosition);
+                return StrEnd;
             }
             return text.Substring(start);
         }
@@ -51,7 +55,9 @@ namespace NetSwissTools.Utils
                 return "";
 
             var TextResult = SubStr(text, start, count);
-            var Elipsis = (TextResult.Length != text.Length) ? "..." : "";
+            // var Elipsis = (TextResult.Length != text.Length) ? "..." : "";
+
+            var Elipsis = (count < (text.Length - start) && count > 0) ? "..." : "";
 
             return $"{TextResult}{Elipsis}";
         }
@@ -1381,8 +1387,9 @@ namespace NetSwissTools.Utils
         /// Clear string returned from oracle database
         /// </summary>
         /// <param name="text">Oracle error message</param>
+        /// <param name="onlyCustoms">Only oracle custom error messages</param>
         /// <returns>System.String</returns>
-        public static string ClearOracleString(this string text)
+        public static string ClearOracleString(this string text, bool onlyCustoms = true)
         {
             var TemErro = text.SubStr(0, 4) == "ORA-";
 
@@ -1392,19 +1399,26 @@ namespace NetSwissTools.Utils
                     new[] { "\r\n", "\r", "\n" },
                     StringSplitOptions.None);
 
+                var msg = mensagemPartes.Select(x => x.SubStr(4, 5));
+
                 var temErroCustom = mensagemPartes.Any(r => Convert.ToInt32(r.SubStr(4, 5)).IsBetweenII(20000, 20999));
 
-                if (temErroCustom)
+                if (temErroCustom || !onlyCustoms)
                 {
-                    StringBuilder resultado = new StringBuilder();
-                    foreach (var message in mensagemPartes)
+                    var resultado = new string[mensagemPartes.Length];
+                    for (int i = 0, length = mensagemPartes.Length; i < length; i++)
                     {
+                        var message = mensagemPartes[i];
+
                         if (!message.IsEmpty() && message.StartsWith("ORA") && Convert.ToInt32(message.SubStr(4, 5)).IsBetweenII(20000, 20999))
-                            resultado.AppendLine(message.Substring(10).TrimStartAndEnd());
+                            resultado[i] = message.Substring(10).TrimStartAndEnd();
+                        else if (!message.IsEmpty() && message.StartsWith("ORA") && (!Convert.ToInt32(message.SubStr(4, 5)).IsBetweenII(20000, 20999) && !onlyCustoms))
+                            resultado[i] = message.Substring(10).TrimStartAndEnd();
                         else if (!message.IsEmpty() && !message.StartsWith("ORA"))
-                            resultado.AppendLine(message);
+                            resultado[i] = message;
                     }
-                    return resultado.ToString();
+                    var s = string.Join("\r\n", resultado); // resultado.ToString();
+                    return s;
                 }
             }
 

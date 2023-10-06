@@ -36,5 +36,19 @@ namespace NetSwissTools.Tests.Utils
         {
             Text.SubStrElipsisEnd(Start, Count).Should().Be(ShoudBeText);
         }
+
+        [Theory]
+        [InlineData("ORA-12154: TNS: could not resolve the connect identifier specified", "ORA-12154: TNS: could not resolve the connect identifier specified", true)]
+        [InlineData("ORA-12154: TNS: could not resolve the connect identifier specified", "TNS: could not resolve the connect identifier specified", false)]
+        [InlineData("ORA-00001: unique constraint violated\r\nORA-00002: no storage definition found for segment(0, 0)", "unique constraint violated\r\nno storage definition found for segment(0, 0)", false)]
+        [InlineData("ORA-00001: unique constraint violated\r\nORA-00002: no storage definition found for segment(0, 0)", "ORA-00001: unique constraint violated\r\nORA-00002: no storage definition found for segment(0, 0)", true)]
+        [InlineData("ORA-01653: unable to extend table companies", "unable to extend table companies", false)]
+        [InlineData("ORA-01653: unable to extend table companies", "ORA-01653: unable to extend table companies", true)]
+        [InlineData("ORA-20001: Você é a vergonha da profission", "Você é a vergonha da profission", false)]
+        [InlineData("ORA-20001: Você é a vergonha da profission", "Você é a vergonha da profission", true)]
+        public void Shoud_ClearOracleString(string Text, string ShoudBeText, bool onlyCustoms)
+        {
+            Text.ClearOracleString(onlyCustoms).Should().Be(ShoudBeText);
+        }
     }
 }
