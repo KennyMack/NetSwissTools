@@ -17,4 +17,4 @@ dotnet add package NetSwissTools
 ```
 
 ## About
-.NET DevPack was developed by [Jonathan](https://kennymack.github.io) under the [MIT license](LICENSE).
+NetSwissTools was developed by [Jonathan](https://kennymack.github.io) under the [MIT license](LICENSE).

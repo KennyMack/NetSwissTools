@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>NetSwissTools</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Jonathan Vale</Authors>
     <Company>KennyMack</Company>
@@ -13,8 +13,8 @@
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/KennyMack/NetSwissTools</RepositoryUrl>
     <RepositoryType>public</RepositoryType>
-    <AssemblyVersion>1.0.0.3</AssemblyVersion>
-    <FileVersion>1.0.0.3</FileVersion>
+    <AssemblyVersion>1.0.0.4</AssemblyVersion>
+    <FileVersion>1.0.0.4</FileVersion>
     <PackageTags>Swiss;Tools;SwissArmy;Common;Validation;Exception;Net Tools;CPF;CNPJ;CEP;IE;Inscrição Estadual;Utility;Utilities;extensions;method;methods;helpers;helpers;strings;dates;pack;</PackageTags>
     <PackageReleaseNotes />
   </PropertyGroup>
