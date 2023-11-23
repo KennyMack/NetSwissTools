@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BACEN" xml:space="preserve">
+    <value>BACEN</value>
+  </data>
+  <data name="CellPhone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="CityID" xml:space="preserve">
+    <value>Cód. cidade</value>
+  </data>
+  <data name="CNPJCPF" xml:space="preserve">
+    <value>CNPJ/CPF</value>
+  </data>
+  <data name="Complement" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="CountryID" xml:space="preserve">
+    <value>Cód. País</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Data de criação</value>
+  </data>
+  <data name="DDD" xml:space="preserve">
+    <value>DDD</value>
+  </data>
+  <data name="DDI" xml:space="preserve">
+    <value>DDI</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Data de entrega</value>
+  </data>
+  <data name="DescriptionPaymentCondition" xml:space="preserve">
+    <value>Descrição da cond. pagto</value>
+  </data>
+  <data name="DescriptionPaymentType" xml:space="preserve">
+    <value>Descrição Forma pagto.</value>
+  </data>
+  <data name="DescriptionProd" xml:space="preserve">
+    <value>Descrição produto</value>
+  </data>
+  <data name="DevicesCount" xml:space="preserve">
+    <value>N° Dispositivos</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Endereco" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="EstabID" xml:space="preserve">
+    <value>Cód. Estabelecimento</value>
+  </data>
+  <data name="EstablishmentKey" xml:space="preserve">
+    <value>Chave do estabelecimento</value>
+  </data>
+  <data name="Family" xml:space="preserve">
+    <value>Familia</value>
+  </data>
+  <data name="IBGE" xml:space="preserve">
+    <value>IBGE</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Caminho imagem</value>
+  </data>
+  <data name="Initials" xml:space="preserve">
+    <value>Sigla</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="IsProposal" xml:space="preserve">
+    <value>Orçamento</value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>Ultimo login</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Data de modificação</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="NickName" xml:space="preserve">
+    <value>Apelido do aparelho</value>
+  </data>
+  <data name="NomeFantasia" xml:space="preserve">
+    <value>Nome fantasia</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="Num" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="PercCommission" xml:space="preserve">
+    <value>(%)Comissão</value>
+  </data>
+  <data name="PercDiscount" xml:space="preserve">
+    <value>(%)Desconto</value>
+  </data>
+  <data name="PercIPI" xml:space="preserve">
+    <value>(%)IPI</value>
+  </data>
+  <data name="PercMaxDiscount" xml:space="preserve">
+    <value>(%)Max. desconto</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="ProductKey" xml:space="preserve">
+    <value>Cód. produto</value>
+  </data>
+  <data name="RazaoSocial" xml:space="preserve">
+    <value>Razão social</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="StateID" xml:space="preserve">
+    <value>Cód. estado</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatusEnterprise" xml:space="preserve">
+    <value>Status da empresa</value>
+  </data>
+  <data name="StatusPed" xml:space="preserve">
+    <value>Status pedido</value>
+  </data>
+  <data name="StatusSinc" xml:space="preserve">
+    <value>Status da sicronização</value>
+  </data>
+  <data name="StockBalance" xml:space="preserve">
+    <value>Saldo de estoque</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="TypeEnterprise" xml:space="preserve">
+    <value>Tipo da empresa</value>
+  </data>
+  <data name="TypePayID" xml:space="preserve">
+    <value>Cód. Forma pagto</value>
+  </data>
+  <data name="UniqueKey" xml:space="preserve">
+    <value>Chave única</value>
+  </data>
+  <data name="UserKey" xml:space="preserve">
+    <value>Chave do usuário</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>Tipo do usuário</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="PasswordConfirm" xml:space="preserve">
+    <value>Confirme a senha</value>
+  </data>
+  <data name="OriginLogin" xml:space="preserve">
+    <value>Origem do login</value>
+  </data>
+  <data name="OriginCreate" xml:space="preserve">
+    <value>Origem da criação</value>
+  </data>
+  <data name="COFINS" xml:space="preserve">
+    <value>COFINS</value>
+  </data>
+  <data name="PIS" xml:space="preserve">
+    <value>PIS</value>
+  </data>
+  <data name="IdERP" xml:space="preserve">
+    <value>Id. ERP</value>
+  </data>
+  <data name="PayConditionId" xml:space="preserve">
+    <value>Cond. pagto. padrão</value>
+  </data>
+  <data name="AliqICMS" xml:space="preserve">
+    <value>Aliquota ICMS</value>
+  </data>
+  <data name="AliqICMSST" xml:space="preserve">
+    <value>Aliquota ICMS-ST</value>
+  </data>
+  <data name="MVA" xml:space="preserve">
+    <value>MVA</value>
+  </data>
+  <data name="NCM" xml:space="preserve">
+    <value>NCM</value>
+  </data>
+  <data name="RegionId" xml:space="preserve">
+    <value>Cód. Região de vendas</value>
+  </data>
+  <data name="UF" xml:space="preserve">
+    <value>UF</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>Cód. usuário</value>
+  </data>
+  <data name="PackageQTD" xml:space="preserve">
+    <value>Qtd. por embalagem</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="SaleFactor" xml:space="preserve">
+    <value>Fator U.M. Venda</value>
+  </data>
+  <data name="SaleUnit" xml:space="preserve">
+    <value>U.M. Venda</value>
+  </data>
+  <data name="AllowChangePrice" xml:space="preserve">
+    <value>Permite alterar preço</value>
+  </data>
+  <data name="AllowEnterprise" xml:space="preserve">
+    <value>Permite cadastrar empresa</value>
+  </data>
+  <data name="AllowPayment" xml:space="preserve">
+    <value>Permite alterar cond. pagamento</value>
+  </data>
+  <data name="CityName" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Classificação da empresa</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Código do País</value>
+  </data>
+  <data name="IE" xml:space="preserve">
+    <value>IE</value>
+  </data>
+  <data name="CountryIni" xml:space="preserve">
+    <value>Sigla do País</value>
+  </data>
+  <data name="CountryName" xml:space="preserve">
+    <value>Nome do País</value>
+  </data>
+  <data name="DisplayLat" xml:space="preserve">
+    <value>Latitude de visualização</value>
+  </data>
+  <data name="DisplayLng" xml:space="preserve">
+    <value>Longitude de visualização</value>
+  </data>
+  <data name="EnterpriseId" xml:space="preserve">
+    <value>Cód. Empresa</value>
+  </data>
+  <data name="NavLat" xml:space="preserve">
+    <value>Latitude de navegação</value>
+  </data>
+  <data name="NavLng" xml:space="preserve">
+    <value>Longitude de navegação</value>
+  </data>
+  <data name="RG" xml:space="preserve">
+    <value>RG</value>
+  </data>
+  <data name="StateName" xml:space="preserve">
+    <value>Nome do estado</value>
+  </data>
+  <data name="TypeAddress" xml:space="preserve">
+    <value>Tipo do endreço</value>
+  </data>
+  <data name="CIOC" xml:space="preserve">
+    <value>Sigla Internacional</value>
+  </data>
+  <data name="CountryLocalName" xml:space="preserve">
+    <value>Descrição do país</value>
+  </data>
+  <data name="NumericCode" xml:space="preserve">
+    <value>Cód. País internacional</value>
+  </data>
+  <data name="CatDescription" xml:space="preserve">
+    <value>Descrição da categoria</value>
+  </data>
+  <data name="ClassDescription" xml:space="preserve">
+    <value>Descrição da classe</value>
+  </data>
+  <data name="FamilyDescription" xml:space="preserve">
+    <value>Descrição da família</value>
+  </data>
+  <data name="FamilyId" xml:space="preserve">
+    <value>Familia</value>
+  </data>
+  <data name="GroupDescription" xml:space="preserve">
+    <value>Descrição da grupo</value>
+  </data>
+  <data name="ProductTypeId" xml:space="preserve">
+    <value>Tipo do produto</value>
+  </data>
+  <data name="TypeDescription" xml:space="preserve">
+    <value>Descrição tipo do produto</value>
+  </data>
+  <data name="TypeId" xml:space="preserve">
+    <value>Tipo do produto</value>
+  </data>
+  <data name="UnitDescription" xml:space="preserve">
+    <value>Descrição da unidade de medida</value>
+  </data>
+  <data name="CategoryNCM" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contato</value>
+  </data>
+  <data name="ContactSector" xml:space="preserve">
+    <value>Setor do contato</value>
+  </data>
+  <data name="IPI" xml:space="preserve">
+    <value>IPI</value>
+  </data>
+  <data name="Ramal" xml:space="preserve">
+    <value>Ramal</value>
+  </data>
+  <data name="ReceptivityIndex" xml:space="preserve">
+    <value>Indice de receptividade</value>
+  </data>
+  <data name="TokenCNPJ" xml:space="preserve">
+    <value>Token CNPJ</value>
+  </data>
+  <data name="ZIPCodeEnd" xml:space="preserve">
+    <value>CEP Término</value>
+  </data>
+  <data name="ZIPCodeStart" xml:space="preserve">
+    <value>CEP Início</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="CarrierID" xml:space="preserve">
+    <value>Cód. Transportadora</value>
+  </data>
+  <data name="ClientItem" xml:space="preserve">
+    <value>Item do cliente</value>
+  </data>
+  <data name="ClientOrder" xml:space="preserve">
+    <value>Pedido do cliente</value>
+  </data>
+  <data name="FreightPaidBy" xml:space="preserve">
+    <value>Frete pago por</value>
+  </data>
+  <data name="FreightValue" xml:space="preserve">
+    <value>Valor do frete</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item do pedido</value>
+  </data>
+  <data name="ItemLevel" xml:space="preserve">
+    <value>Nível item do pedido</value>
+  </data>
+  <data name="MainOrderID" xml:space="preserve">
+    <value>Cód. Ped. Venda Principal</value>
+  </data>
+  <data name="AllowDiscount" xml:space="preserve">
+    <value>Permite desconto no pedido</value>
+  </data>
+  <data name="TotalValue" xml:space="preserve">
+    <value>Valor total</value>
+  </data>
+  <data name="TotalValueCommission" xml:space="preserve">
+    <value>Valor total comissão</value>
+  </data>
+  <data name="TotalValueWithDiscount" xml:space="preserve">
+    <value>Valor total c/ desconto</value>
+  </data>
+  <data name="AcquirerName" xml:space="preserve">
+    <value>Nome do credenciador</value>
+  </data>
+  <data name="AdminCode" xml:space="preserve">
+    <value>Código Administrativo</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="AuthCode" xml:space="preserve">
+    <value>Código da Autorização</value>
+  </data>
+  <data name="AuthDate" xml:space="preserve">
+    <value>Data da Autorização</value>
+  </data>
+  <data name="CardBrand" xml:space="preserve">
+    <value>Marca do cartão</value>
+  </data>
+  <data name="CardLastDigits" xml:space="preserve">
+    <value>Últimos digitos do cartão</value>
+  </data>
+  <data name="Installments" xml:space="preserve">
+    <value>Parcelas</value>
+  </data>
+  <data name="NSU" xml:space="preserve">
+    <value>Número Sequencial Único</value>
+  </data>
+  <data name="CapptaKey" xml:space="preserve">
+    <value>Chave de autenticação Cappta</value>
+  </data>
+  <data name="StatusCRM" xml:space="preserve">
+    <value>Status CRM</value>
+  </data>
+  <data name="ContactEmail" xml:space="preserve">
+    <value>E-mail do contato</value>
+  </data>
+  <data name="ContactPhone" xml:space="preserve">
+    <value>Telefone do contato</value>
+  </data>
+  <data name="PercDiscountPrice" xml:space="preserve">
+    <value>(%) Desconto de preço</value>
+  </data>
+  <data name="PercIncreasePrice" xml:space="preserve">
+    <value>(%) Incremento de preço</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>Setor</value>
+  </data>
+  <data name="ShippingDays" xml:space="preserve">
+    <value>Dias para entrega</value>
+  </data>
+  <data name="TotalValueDiscount" xml:space="preserve">
+    <value>Valor total do desconto</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Extensão</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Identificador</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Caminho</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>Cód. Produto</value>
+  </data>
+  <data name="Visible" xml:space="preserve">
+    <value>Visível</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>Tamanho do arquivo</value>
+  </data>
+  <data name="BoardID" xml:space="preserve">
+    <value>Cód. mesa</value>
+  </data>
+  <data name="BoardName" xml:space="preserve">
+    <value>Nome da mesa</value>
+  </data>
+  <data name="CardID" xml:space="preserve">
+    <value>Cód. cartão</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="DescCard" xml:space="preserve">
+    <value>Nome do cartão</value>
+  </data>
+  <data name="DescTag" xml:space="preserve">
+    <value>Etiqueta</value>
+  </data>
+  <data name="FieldID" xml:space="preserve">
+    <value>Cód. campo</value>
+  </data>
+  <data name="IsComplete" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="IsPublic" xml:space="preserve">
+    <value>Público</value>
+  </data>
+  <data name="IsSuccess" xml:space="preserve">
+    <value>Sucesso</value>
+  </data>
+  <data name="ListDescription" xml:space="preserve">
+    <value>Descrição da lista</value>
+  </data>
+  <data name="ListName" xml:space="preserve">
+    <value>Nome da lista</value>
+  </data>
+  <data name="NameCard" xml:space="preserve">
+    <value>Nome do cartão</value>
+  </data>
+  <data name="NameField" xml:space="preserve">
+    <value>Nome do campo</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Campo obrigatório</value>
+  </data>
+  <data name="SettingsID" xml:space="preserve">
+    <value>Cód. configuração</value>
+  </data>
+  <data name="TypeCard" xml:space="preserve">
+    <value>Tipo do cartão</value>
+  </data>
+  <data name="TypeField" xml:space="preserve">
+    <value>Tipo do campo</value>
+  </data>
+  <data name="MimeType" xml:space="preserve">
+    <value>Tipo do arquivo</value>
+  </data>
+  <data name="PositionList" xml:space="preserve">
+    <value>Posição da lista</value>
+  </data>
+  <data name="EndEvent" xml:space="preserve">
+    <value>Término do evento</value>
+  </data>
+  <data name="StartEvent" xml:space="preserve">
+    <value>Início do evento</value>
+  </data>
+  <data name="EventTitle" xml:space="preserve">
+    <value>Titulo do evento</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titulo</value>
+  </data>
+  <data name="RevisionReason" xml:space="preserve">
+    <value>Motivo da revisão</value>
+  </data>
+  <data name="AllowPartial" xml:space="preserve">
+    <value>Permite parcial</value>
+  </data>
+  <data name="FinancialTaxes" xml:space="preserve">
+    <value>Taxa financeira</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="CreditLimit" xml:space="preserve">
+    <value>Limite de crédito</value>
+  </data>
+  <data name="CreditUsed" xml:space="preserve">
+    <value>Limite usado</value>
+  </data>
+  <data name="QuantityReference" xml:space="preserve">
+    <value>Quantidade de referência</value>
+  </data>
+  <data name="StatusPayment" xml:space="preserve">
+    <value>Status Pagamento</value>
+  </data>
+  <data name="Annotation" xml:space="preserve">
+    <value>Anotação</value>
+  </data>
+  <data name="ClientPercDiscount" xml:space="preserve">
+    <value>(%) Desconto do cliente</value>
+  </data>
+  <data name="EstablishmentId" xml:space="preserve">
+    <value>Cód. Estabelecimento</value>
+  </data>
+</root>
