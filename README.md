@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KennyMack/NetSwissTools/main/.github/images/NetSwissToolsIcon.png" alt=".NET Swiss Tools icon" width="200px" />
-</p>
+![Logo](https://raw.githubusercontent.com/KennyMack/NetSwissTools/main/.github/images/NetSwissToolsIcon.png)
 
 | Package |  Version | Popularity |
 | ------- | ----- | ----- |
